@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copyright Claim System (Demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Copyright Claim</h1>
+    <span class="tag">DEMO · EDUCATIONAL USE ONLY</span>
+  </header>
+
+  <div class="steps">
+    <div class="step-dot active">1</div>
+    <div class="step-dot">2</div>
+    <div class="step-dot">3</div>
+  </div>
+
+  <form id="claimForm">
+
+    <!-- STEP 1 -->
+    <section class="form-step active">
+      <label>
+        Full Legal Name
+        <input required>
+      </label>
+      <label>
+        Email Address
+        <input type="email" required>
+      </label>
+      <button type="button" onclick="nextStep()">Continue</button>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="form-step">
+      <label>
+        URL of Infringing Content
+        <input type="url" required>
+      </label>
+      <label>
+        Description of Original Work
+        <textarea required></textarea>
+      </label>
+      <button type="button" onclick="nextStep()">Continue</button>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="form-step">
+      <label class="checkbox">
+        <input type="checkbox" required>
+        I confirm this is a demo submission
+      </label>
+      <button type="submit">Submit Demo Claim</button>
+    </section>
+
+  </form>
+
+  <div id="loading" class="hidden">Submitting…</div>
+
+  <div id="status" class="hidden">
+    <h2>Status: <span id="statusText">Under Review</span></h2>
+    <p>This is a simulated result. No real data was sent.</p>
+    <button onclick="resetDemo()">Reset Demo</button>
+  </div>
+
+  <footer>
+    <p>This project demonstrates UI/UX and form workflows only.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
